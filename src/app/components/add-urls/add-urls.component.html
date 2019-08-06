@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 70px;">
+
+  <div class="row">
+
+    <div class="col-sm-8 offset-sm-2">
+
+      <div class="info-form">
+        <form>
+          <div class="form-group">
+            <label for="id">Url ID</label>
+            <input [(ngModel)]="url.id" type="text" name="id" class="form-control" id="id" aria-describedby="idHelp" placeholder="Enter ID">
+            <small id="idHelp" class="form-text text-muted">Enter ID</small>
+
+            <label for="urlName">URL name</label>
+            <input [(ngModel)]="url.urlName" type="text" name="name" class="form-control" id="urlName" aria-describedby="nameHelp" placeholder="Enter your name">
+            <small id="nameHelp" class="form-text text-muted">Enter name</small>
+
+            <label for="url">URL</label>
+            <input [(ngModel)]="url.url" type="text" name="email" class="form-control" id="url" aria-describedby="emailHelp"
+                   placeholder="Enter your email">
+            <small id="nameHelp" class="form-text text-muted">Enter url</small>
+
+            <label for="description">URL Description</label>
+            <textarea [(ngModel)]="url.description" name="description" class="form-control" id="description" aria-describedby="descHelp">
+                      </textarea>
+            <small id="descHelp" class="form-text text-muted">Enter url's description</small>
+
+          </div>
+        </form>
+        <button class="btn btn-primary" (click)="createContact()">Create url</button>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>

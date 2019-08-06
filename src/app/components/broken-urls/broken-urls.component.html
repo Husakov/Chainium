@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 70px;">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>URL name</th>
+      <th>URL</th>
+      <th>Detail</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let url of urls">
+
+      <td>{{ url.id }}</td>
+      <td> {{ url.urlName }}</td>
+      <td> {{ url.url }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="selectUrl(url)"> Show details</button>
+      </td>
+      <td>
+        <button  class="btn btn-danger" (click)="deleteUrl(url)"><a href="#" style="color: white">Delete</a></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="card text-center" *ngIf="selectedUrl">
+    <div class="card-header">
+      # {{selectedUrl.id}}
+    </div>
+    <div class="card-block">
+      <h4 class="card-title">{{selectedUrl.urlName}}</h4>
+      <p class="card-text">
+        {{selectedUrl.description}}
+      </p>
+    </div>
+
+  </div>
+
+</div>
